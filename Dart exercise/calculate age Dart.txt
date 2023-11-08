@@ -1,0 +1,15 @@
+void main() {
+  String birthDateString = "1984-04-04";
+  DateTime birthDate = DateTime.parse(birthDateString);
+
+  DateTime currentDate = DateTime.now();
+  
+  int age = currentDate.year - birthDate.year;
+  if (currentDate.month < birthDate.month || (currentDate.month == birthDate.month && currentDate.day < birthDate.day)) {
+    age--;
+  }
+  
+  print("Du bist $age Jahre alt");
+}
+  Du bist 39 Jahre alt
+https://dartpad.dev/?id=1013ec1d73f014934885bb77b45b328d
